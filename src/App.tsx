@@ -1,7 +1,11 @@
-function App() {
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero/";
+
+const App: React.FC = () => {
   return (
-    <div className="bg-red-500 text-white p-10 text-3xl">
-      Tailwind is working!
+    <div className="font-sans">
+      <Navbar />
+      <Hero />
     </div>
   );
 }
