@@ -1,29 +1,25 @@
 import { useState } from "react";
 
 const Navbar = () => {
-    const [ isOpen, setIsOpen ] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <nav className="fixed top-0 w-full bg-black bg-opacity-70 text-white z-50">
-      <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
-        <div className="text-2xl font-bold">YourLogo</div>
-
+  return (
+    <nav className="fixed top-0 w-full bg-black bg-opacity-70 text-white z-50">
+      <div className="max-w-6xl mx-auto flex justify-end items-center p-4">
+        {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8">
           <li>
             <a href="#home" className="hover:text-gray-400 transition">
               Home
             </a>
           </li>
-          <li>
-            <a href="#about" className="hover:text-gray-400 transition">
-              About
-            </a>
-          </li>
+
           <li>
             <a href="#work" className="hover:text-gray-400 transition">
               Projects
             </a>
           </li>
+
           <li>
             <a href="#contact" className="hover:text-gray-400 transition">
               Contact
@@ -69,16 +65,13 @@ const Navbar = () => {
               Home
             </a>
           </li>
-          <li>
-            <a href="#about" className="hover:text-gray-400 transition">
-              About
-            </a>
-          </li>
+
           <li>
             <a href="#work" className="hover:text-gray-400 transition">
               Projects
             </a>
           </li>
+
           <li>
             <a href="#contact" className="hover:text-gray-400 transition">
               Contact
