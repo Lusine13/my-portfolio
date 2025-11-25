@@ -3,17 +3,16 @@ import { motion } from "framer-motion";
 import bgHero from "../../core/Images/bg-hero.jpg";
 import "./index.css";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section
-    id="about"
-    className="relative min-h-screen flex items-center justify-between px-8 sm:px-20 text-white overflow-hidden bg-[#0d0d12]"
-  >
-    {/* Mesh blobs for depth */}
-    <div className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-[#5c3aff] opacity-20 blur-[120px] rounded-full"></div>
-    <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#18a3ff] opacity-20 blur-[120px] rounded-full"></div>
-  
-            {/* LEFT TEXT */}
+      id="about"
+      className="relative min-h-screen flex items-center justify-between px-8 sm:px-20 text-white overflow-hidden bg-[#0d0d12]"
+    >
+      {/* Mesh blobs */}
+      <div className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-[#5c3aff] opacity-20 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#18a3ff] opacity-20 blur-[120px] rounded-full"></div>
+
       <div className="relative z-10 max-w-xl ml-16">
         <motion.h1
           initial={{ opacity: 0, y: 15 }}
@@ -31,14 +30,7 @@ const Hero = () => {
           className="text-3xl sm:text-4xl text-gray-300 mb-8"
         >
           <TypeAnimation
-            sequence={[
-              "React Developer",
-              1500,
-              "Frontend Engineer",
-              1500,
-              "UI/UX Enthusiast",
-              1500,
-            ]}
+            sequence={["React Developer", 1500, "Frontend Engineer", 1500, "UI/UX Enthusiast", 1500]}
             wrapper="span"
             speed={45}
             repeat={Infinity}
@@ -56,7 +48,6 @@ const Hero = () => {
           animations and user experience.
         </motion.p>
 
-        {/* BUTTONS */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,22 +70,15 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Floating image on the right */}
       <div className="flex-1 hidden md:flex justify-end">
         <img
           src={bgHero}
           alt="Hero visual"
-          className="
-            w-[650px] lg:w-[850px]
-            object-contain 
-            drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)]
-            animate-float
-          "
+          className="w-[650px] lg:w-[850px] object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.5)] animate-float"
         />
       </div>
 
-      {/* Extra background gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0f] via-[#0a0a0a] to-[#111] opacity-70"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0f0f0f] via-[#0a0a0a] to-[#111] opacity-60"></div>
     </section>
   );
 };
