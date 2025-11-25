@@ -3,31 +3,34 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeMenu = () => setIsOpen(false);
+
   return (
-    <nav className="fixed top-0 w-full bg-black bg-opacity-70 text-white z-50">
-      <div className="max-w-6xl mx-auto flex justify-end items-center p-4">
+    <nav className="fixed top-0 w-full bg-black/70 text-white z-50 backdrop-blur-md">
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-8 sm:px-20 py-6">
+        
+        {/* Logo / Name */}
+        <div className="text-2xl sm:text-3xl font-bold tracking-wide cursor-pointer">
+          Lusine Vardanyan
+        </div>
+
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8">
+        <ul className="hidden md:flex space-x-12 text-lg sm:text-xl font-medium">
           <li>
-            <a href="#home" className="hover:text-gray-400 transition">
-              Home
-            </a>
+            <a href="#about" className="hover:text-indigo-400 transition">About</a>
           </li>
-
           <li>
-            <a href="#work" className="hover:text-gray-400 transition">
-              Projects
-            </a>
+            <a href="#cv" className="hover:text-indigo-400 transition">CV</a>
           </li>
-
           <li>
-            <a href="#contact" className="hover:text-gray-400 transition">
-              Contact
-            </a>
+            <a href="#work" className="hover:text-indigo-400 transition">Projects</a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:text-indigo-400 transition">Contact</a>
           </li>
         </ul>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Toggle */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
             <svg
@@ -59,21 +62,24 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden bg-black text-white flex flex-col items-center space-y-4 py-4">
+        <ul className="md:hidden bg-black/90 flex flex-col items-center space-y-6 py-6 text-lg font-medium animate-fadeIn">
           <li>
-            <a href="#home" className="hover:text-gray-400 transition">
-              Home
+            <a href="#about" onClick={closeMenu} className="hover:text-indigo-400 transition">
+              About
             </a>
           </li>
-
           <li>
-            <a href="#work" className="hover:text-gray-400 transition">
+            <a href="#cv" onClick={closeMenu} className="hover:text-indigo-400 transition">
+              CV
+            </a>
+          </li>
+          <li>
+            <a href="#work" onClick={closeMenu} className="hover:text-indigo-400 transition">
               Projects
             </a>
           </li>
-
           <li>
-            <a href="#contact" className="hover:text-gray-400 transition">
+            <a href="#contact" onClick={closeMenu} className="hover:text-indigo-400 transition">
               Contact
             </a>
           </li>

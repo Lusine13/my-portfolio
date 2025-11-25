@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero/";
 import CV from "./components/CV/";
+import Projects from "./components/Projects";
 
 const App: React.FC = () => {
   return (
@@ -8,6 +9,7 @@ const App: React.FC = () => {
       <Navbar />
       <Hero />
       <CV />
+      <Projects />
     </div>
   );
 }
