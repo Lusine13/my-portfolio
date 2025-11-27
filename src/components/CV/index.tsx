@@ -19,7 +19,7 @@ const CV: React.FC = () => {
         </motion.p>
 
         <motion.a
-          href="/CV.pdf"
+          href="/Lusine Vardanyan.pdf"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}
