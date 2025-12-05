@@ -7,3 +7,12 @@ html {
     scroll-behavior: smooth;
   }
   
+@keyframes rgbGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-rgbGlow {
+  animation: rgbGlow 6s ease-in-out infinite;
+}

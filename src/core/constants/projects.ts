@@ -9,7 +9,7 @@ export const projects: Project[] = [
     github: "https://github.com/Lusine13/Jira2",
   },
   {
-    title: "Spender App",
+    title: "Spender",
     img: "/projects/spender.png",
     description: "A personal finance tracker built with React. Uses Ant Design components for UI, allowing users to track expenses and manage budgets with data stored in local storage.",
     link: "https://spender-969.netlify.app",
