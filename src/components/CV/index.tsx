@@ -16,6 +16,7 @@ import {
   SiFramer,
 } from "react-icons/si";
 
+// Active skills
 const activeSkills = [
   { Icon: FaHtml5, label: "HTML5" },
   { Icon: FaCss3Alt, label: "CSS3" },
@@ -29,42 +30,50 @@ const activeSkills = [
   { Icon: FaGitAlt, label: "Git" },
 ];
 
+// Keyboard layout
 const layout = [
-  { passive: 4, active: 4 }, 
-  { passive: 3, active: 5 }, 
-  { passive: 6, active: 2 }, 
-  { passive: 8, active: 0 }, 
+  { passive: 4, active: 4 },
+  { passive: 3, active: 5 },
+  { passive: 6, active: 2 },
+  { passive: 8, active: 0 },
 ];
 
 const CV: React.FC = () => {
-    let activeIndex = 0;
+  let activeIndex = 0;
 
   return (
     <section
       id="cv"
-      className="relative min-h-screen px-6 py-28 text-white bg-[#0d0d0d] overflow-hidden"
+      className="
+        relative min-h-screen px-6 py-28 text-white 
+        bg-[#0d0d0d] overflow-hidden
+      "
     >
-      {/* Background blobs */}
-      <div className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-[#5c3aff] opacity-20 blur-[120px] rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-[#18a3ff] opacity-20 blur-[120px] rounded-full"></div>
+      {/* --- CYBER GRADIENT BACKGROUND --- */}
+     <div className="absolute inset-0 bg-gradient-to-br from-[#0b0b0d] via-[#09090b] to-[#000] opacity-90"></div>
+
+      {/* --- NEBULA BLURS --- */}      
+      <div className="absolute -top-32 left-0 w-[430px] h-[430px] bg-[#6a4dff] opacity-20 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#18a3ff] opacity-20 blur-[130px] rounded-full"></div>
+
+      {/* --- FUTURISTIC GRID OVERLAY --- */}
+      <div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(90deg,#ffffff10_1px,transparent_1px),linear-gradient(#ffffff10_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
       <div className="relative max-w-6xl mx-auto flex flex-col items-center text-center">
-        {/* Main Title */}
+        {/* Title */}
         <motion.h2
-          className="text-4xl sm:text-5xl font-extrabold mb-4 text-indigo-400"
+          className="text-4xl sm:text-5xl font-extrabold mb-4 text-indigo-300 drop-shadow-[0_0_12px_rgba(99,102,241,0.7)]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
         >
           My CV
         </motion.h2>
 
         {/* Short description */}
         <motion.p
-          className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed"
+          className="text-lg text-gray-300 mb-4 max-w-xl leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15 }}
         >
           Click the button below to view or download my CV.
         </motion.p>
@@ -74,35 +83,24 @@ const CV: React.FC = () => {
           href="/Lusine Vardanyan.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-indigo-700/40 transition text-lg mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25 }}
-          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-xl font-medium shadow-lg shadow-indigo-700/40 transition text-lg mb-16"
         >
           View / Download CV
         </motion.a>
 
-        {/* Skills Title */}
-        <motion.h3
-          className="text-2xl sm:text-3xl font-semibold mb-8 text-gray-200"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          Technical Skills
-        </motion.h3>
-
-        {/* KEYBOARD CONTAINER */}
+        {/* --- KEYBOARD CONTAINER --- */}
         <motion.div
           className="relative w-full max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.35 }}
         >
-          {/* RGB underglow (edge only) */}
+          {/* RGB underglow */}
           <div className="absolute inset-0 blur-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 opacity-50 translate-y-6 pointer-events-none"></div>
 
-          {/* Keyboard body */}
+          {/* Main keyboard body */}
           <div
             className="
               relative rounded-3xl 
@@ -112,52 +110,48 @@ const CV: React.FC = () => {
               px-4 py-6 sm:px-6 sm:py-7
             "
           >
-            {/* Top little “status bar” strip */}
+            {/* Status bar */}
             <div className="mb-4 flex justify-between items-center text-xs text-gray-500">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-red-500/70"></span>
-                <span className="w-2 h-2 rounded-full bg-yellow-400/70"></span>
-                <span className="w-2 h-2 rounded-full bg-green-500/70"></span>
+                <span className="w-2 h-2 rounded-full bg-red-500/60"></span>
+                <span className="w-2 h-2 rounded-full bg-yellow-400/60"></span>
+                <span className="w-2 h-2 rounded-full bg-green-500/60"></span>
               </div>
-              <span className="text-[10px] uppercase tracking-[0.2em] text-gray-400">
-                Skillboard v1.0
+
+              <span className="text-[15px] uppercase tracking-[0.18em] text-gray-400">
+                Skillboard
               </span>
             </div>
 
-            {/* Keys grid */}
-            <div className="grid grid-cols-8 gap-2 sm:gap-2.5 md:gap-3">
-              {layout.map((row, rowIndex) => {
+            {/* Keys */}
+            <div className="grid grid-cols-8 gap-2 sm:gap-3">
+              {layout.map((row, rIndex) => {
                 const rowElements: React.ReactNode[] = [];
 
                 // Passive keys
                 for (let i = 0; i < row.passive; i++) {
                   rowElements.push(
                     <div
-                      key={`p-${rowIndex}-${i}`}
+                      key={`p-${rIndex}-${i}`}
                       className="
                         h-12 sm:h-14 rounded-md
-                        bg-[#101018]
-                        border border-[#252538]
-                        shadow-inner
+                        bg-[#101018] border border-[#252538] shadow-inner
                         relative overflow-hidden
                       "
                     >
-                      {/* subtle top highlight */}
                       <div className="absolute inset-x-0 top-0 h-1.5 bg-white/5" />
                     </div>
                   );
                 }
 
-                // Active keys (skills)
+                // Active keys
                 for (let i = 0; i < row.active; i++) {
-                  const skill =
-                    activeSkills[activeIndex % activeSkills.length];
-                  activeIndex++;
+                  const skill = activeSkills[activeIndex++ % activeSkills.length];
 
                   rowElements.push(
                     <motion.div
-                      key={`a-${rowIndex}-${skill.label}-${i}`}
-                      whileHover={{ y: -5, scale: 1.06 }}
+                      key={`a-${rIndex}-${skill.label}`}
+                      whileHover={{ y: -5, scale: 1.08 }}
                       transition={{ type: "spring", stiffness: 220, damping: 14 }}
                       className="
                         h-12 sm:h-14 rounded-md
@@ -165,22 +159,16 @@ const CV: React.FC = () => {
                         border border-indigo-400/60
                         shadow-lg shadow-indigo-700/50
                         flex items-center justify-center
-                        cursor-pointer
-                        relative overflow-hidden
+                        cursor-pointer relative overflow-hidden
                       "
                     >
-                      {/* glossy reflection */}
-                      <div className="absolute inset-x-1 top-0 h-1/2 bg-white/5 opacity-60 blur-[2px] pointer-events-none" />
-                      {/* inner glow ring */}
-                      <div className="absolute inset-0 rounded-md ring-1 ring-indigo-400/40 pointer-events-none" />
-                      <skill.Icon className="relative text-2xl sm:text-3xl text-indigo-200 drop-shadow-[0_0_6px_rgba(129,140,248,0.9)]" />
+                      <div className="absolute inset-x-1 top-0 h-1/2 bg-white/5 opacity-60 blur-[2px]" />
+                      <skill.Icon className="text-2xl sm:text-3xl text-indigo-200 drop-shadow-[0_0_8px_rgba(129,140,248,0.9)]" />
                     </motion.div>
                   );
                 }
 
-                return (
-                  <React.Fragment key={rowIndex}>{rowElements}</React.Fragment>
-                );
+                return <React.Fragment key={rIndex}>{rowElements}</React.Fragment>;
               })}
             </div>
           </div>
