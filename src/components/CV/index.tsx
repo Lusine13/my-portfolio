@@ -62,7 +62,7 @@ const CV: React.FC = () => {
       <div className="relative max-w-6xl mx-auto flex flex-col items-center text-center">
         {/* Title */}
         <motion.h2
-          className="text-4xl sm:text-5xl font-extrabold mb-4 text-indigo-300 drop-shadow-[0_0_12px_rgba(99,102,241,0.7)]"
+          className="text-4xl sm:text-5xl font-extrabold mb-3 text-indigo-300 drop-shadow-[0_0_12px_rgba(99,102,241,0.7)]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
@@ -71,7 +71,7 @@ const CV: React.FC = () => {
 
         {/* Short description */}
         <motion.p
-          className="text-lg text-gray-300 mb-4 max-w-xl leading-relaxed"
+          className="text-lg text-gray-300 mb-3 max-w-xl leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
@@ -83,7 +83,7 @@ const CV: React.FC = () => {
           href="/Lusine Vardanyan.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-indigo-700/40 transition text-lg mb-16"
+          className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-xl shadow-indigo-700/40 transition text-lg mb-14"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
@@ -111,7 +111,7 @@ const CV: React.FC = () => {
             "
           >
             {/* Status bar */}
-            <div className="mb-4 flex justify-between items-center text-xs text-gray-500">
+            <div className="mb-2 flex justify-between items-center text-xs text-gray-500">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-red-500/60"></span>
                 <span className="w-2 h-2 rounded-full bg-yellow-400/60"></span>

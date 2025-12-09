@@ -14,17 +14,9 @@ export const projects: Project[] = [
     description: "A personal finance tracker built with React. Uses Ant Design components for UI, allowing users to track expenses and manage budgets with data stored in local storage.",
     link: "https://spender-969.netlify.app",
     github: "https://github.com/Lusine13/Spender",
-  },
+  },  
   {
-    title: "5-Day Weather Forecast",
-    img: "/projects/weather.png",
-    description:
-      "A weather forecast application that displays a 5-day forecast with real-time data. Built with React, integrated with a weather API.",
-    link: "https://5day-weather-forecast-yerevan.netlify.app/",
-    github: "https://github.com/Lusine13/5day-weather-forecast",
-  },
-  {
-  title: "Guess Weather",
+  title: "Guess The Weather",
   img: "/projects/guess-weather.png",
   description: "A weather guessing game built with React and Ant Design. Users try to guess the temperature for the cities and win the game.",
   link: "https://guess-weather.netlify.app/",
