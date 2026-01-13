@@ -9,6 +9,13 @@ export const projects: Project[] = [
     github: "https://github.com/Lusine13/Jira2",
   },
   {
+  title: "Resume Generator",
+  description: "A full-featured resume builder that allows users to create, edit, and export professional resumes. Includes authentication, live preview, and PDF-ready layouts.",
+  img: "/projects/resume-generator.png",
+  link: "https://resume-generator-949.netlify.app/register",
+  github: "https://github.com/Lusine13/resume-generator",
+  },
+  {
     title: "Spender",
     img: "/projects/spender.png",
     description: "A personal finance tracker built with React. Uses Ant Design components for UI, allowing users to track expenses and manage budgets with data stored in local storage.",
